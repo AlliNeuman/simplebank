@@ -1,0 +1,22 @@
+version: "1"
+project:
+  id: ""
+packages:
+  - name: "db"
+    path: "./db/sqlc"
+    queries: "./db/query/"
+    schema: "./db/migration/"
+    engine: "postgresql"
+
+    # we want sqlc to add json to the struct
+    emit_json_tags: true
+
+    # set this to true if you want to optimize performance
+    emit_prepared_queries: false
+
+    # useful as true if you want to mock the database
+    emit_interface: false
+
+    # accounts table -> Account struct
+    # if you set this to true it will become "Accounts struct"
+    emit_exact_table_names: false
