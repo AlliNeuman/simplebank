@@ -19,4 +19,5 @@ packages:
 
     # accounts table -> Account struct
     # if you set this to true it will become "Accounts struct"
+    # singular is better
     emit_exact_table_names: false
